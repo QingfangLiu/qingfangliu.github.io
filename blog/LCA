@@ -1,2 +1,0 @@
-
-rlca=function(n.items, max.time, startx, drift, K, L, nu, eta, thresh, dt, tau, t0){
