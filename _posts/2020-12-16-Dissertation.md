@@ -16,5 +16,4 @@ The second thing occurred to me near the end of my thesis writing. That is, **si
 
 Simulating the models provides the initial evidence to the role of parameters, the relationship of parameters, and probably the best source of information about how to modify the models in the next step. When you simulate your model, you are actually developing a new machine and holding on to it in your hands. But if you rush to the recovery or the estimation part, you send it to the factory and it's not so close to you anymore. So next time, before doing the time-consuming parameter recovery, start with as many simulations as you can think of!
 
-  happy
-   go
+![Tux, the Linux mascot](/images/Liz.jpeg)
