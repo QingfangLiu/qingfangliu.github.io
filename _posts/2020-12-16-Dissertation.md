@@ -6,7 +6,7 @@ date: 2020-12-16
 
 Last night I sent my dissertation draft to my committee members for approval, so although technically I still need to work for my defense after three weeks, I don't really have much to do about my dissertation.
 
-![Tux, the Linux mascot](/images/Liz.jpeg)
+![Tux, the Linux mascot](/images/Liz.jpg)
 
 I want to reflect about the dissertation project since my mind is still wrapped by those ideas and/or regrets. My dissertation project is certainly a model-heavy project,  utilizing what I have learned about how to construct and evaluate cognitive models to understand human cognition. 
 
