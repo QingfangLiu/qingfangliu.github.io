@@ -1,66 +1,97 @@
+
+/* Base layout and typography */
 body {
     font-family: 'Helvetica', 'Arial', 'Sans-Serif';
     margin: 60px auto;
     width: 70%;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
 }
 
+/* Navigation styling */
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
+    padding: 0;
     list-style: none;
     font-weight: bold;
+    display: flex;
+    gap: 20px;
 }
+
 nav ul li, footer ul li {
     display: inline;
-    margin-right: 20px;
 }
+
 a {
     text-decoration: none;
-    color: #999;
+    color: #0077cc;
 }
+
 a:hover {
     text-decoration: underline;
 }
+
+/* Headings */
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
-
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
+    margin-bottom: 0.2em;
 }
 
 h2 {
     font-size: 2em;
-    margin-top: 1.5em;
+    margin-top: 2em;
     border-bottom: 2px solid #ddd;
-    padding-bottom: 0.2em;
+    padding-bottom: 0.3em;
 }
 
+/* Paragraphs */
+p {
+    font-size: 1.25em;
+    margin-bottom: 1em;
+}
+
+/* Section spacing */
 section {
     margin-top: 2.5em;
 }
 
+/* Skill list */
+ul.skill-list {
+    margin: 1em 0;
+    padding-left: 1.2em;
+    font-size: 1.1em;
+}
+
+ul.skill-list li {
+    margin-bottom: 0.4em;
+}
+
+/* Posts (if used for blogs) */
+ul.posts { 
+    margin: 20px auto 40px; 
+    font-size: 1.2em;
+    padding-left: 0;
+}
+
+ul.posts li {
+    list-style: none;
+    margin-bottom: 0.5em;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: 0.8em;
+    margin-top: 3em;
+    padding-top: 1em;
+    color: #777;
+}
+
+/* Optional card layout for sections like Skills */
 .card {
     border: 1px solid #e0e0e0;
-    padding: 1em;
+    padding: 1.5em;
     border-radius: 8px;
     background: #fafafa;
     margin-top: 1.5em;
 }
-
-
