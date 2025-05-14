@@ -1,13 +1,13 @@
 
-/* Base layout and typography */
 body {
     font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-    margin: 60px auto;
-    width: 70%;
+    margin: 0;
+    padding: 0;
     color: #333;
     background-color: #fff;
     line-height: 1.6;
 }
+
 
 /* Navigation styling */
 nav ul, footer ul {
@@ -97,10 +97,15 @@ footer {
 }
 
 .blurb {
-  margin: 40px;
+  background: #fdfdfd;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   font-size: 1.2em;
   line-height: 1.6;
+  margin: 40px 0;
 }
+
 
 .container {
     max-width: 900px;
