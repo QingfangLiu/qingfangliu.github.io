@@ -1,7 +1,9 @@
 body {
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
     margin: 60px auto;
     width: 70%;
 }
+
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
@@ -41,3 +43,24 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+h2 {
+    font-size: 2em;
+    margin-top: 1.5em;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.2em;
+}
+
+section {
+    margin-top: 2.5em;
+}
+
+.card {
+    border: 1px solid #e0e0e0;
+    padding: 1em;
+    border-radius: 8px;
+    background: #fafafa;
+    margin-top: 1.5em;
+}
+
+
