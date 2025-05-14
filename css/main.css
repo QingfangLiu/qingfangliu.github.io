@@ -23,11 +23,24 @@ h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
+
+h2 {
+    font-size: 2em;
+    margin-top: 2em;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.3em;
+}
+
 p {
-    font-size: 1.5em;
+    font-size: 1.25em;
     line-height: 1.4em;
     color: #333;
 }
+
+section {
+    margin-top: 2.5em;
+}
+
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
