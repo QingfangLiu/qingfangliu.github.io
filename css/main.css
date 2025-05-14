@@ -13,12 +13,16 @@ nav ul li, footer ul li {
     margin-right: 20px;
 }
 a {
+    color: #007acc;
     text-decoration: none;
-    color: #999;
+    transition: color 0.2s ease;
 }
+
 a:hover {
+    color: #005f99;
     text-decoration: underline;
 }
+
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -35,6 +39,7 @@ p {
     font-size: 1.25em;
     line-height: 1.4em;
     color: #333;
+    margin-bottom: 1.5em;
 }
 
 section {
@@ -42,8 +47,11 @@ section {
 }
 
 footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    margin-top: 4em;
+    padding-top: 1.5em;
+    color: #777;
 }
 
 ul.posts { 
