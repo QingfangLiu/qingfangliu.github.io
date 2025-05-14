@@ -73,6 +73,20 @@ ul.posts li {
     list-style: none;
 }
 
+/* Target the entire skills section by its h2 + ul structure */
+h2 + ul {
+    background-color: #f9f9f9;
+    padding: 1.5em;
+    border-radius: 8px;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+}
+
+h2 + ul li {
+    line-height: 1.7em;
+    margin-bottom: 0.8em;
+}
+
 
 
 
