@@ -73,6 +73,29 @@ ul.posts li {
     list-style: none;
 }
 
+.post {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+}
+
+.post h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+
+
 
 
 
