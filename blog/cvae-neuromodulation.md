@@ -26,3 +26,43 @@ This approach is particularly powerful for fMRI because:
 
 ## Dataset and Preprocessing
 
+Each participant underwent multiple resting-state scans across sessions with either **cTBS** or **sham** stimulation. From each session, I computed a functional connectivity matrix (Pearson correlations across ROIs), which served as the model input.
+
+Key characteristics:
+- Input: Flattened upper triangle of FC matrices (after z-transformation)
+- Condition: One-hot vector encoding of stimulation type
+- Target: Reconstruction of the original FC pattern
+
+## Model Architecture
+
+The cVAE consisted of:
+
+- **Encoder**: Maps FC + condition to latent space
+- **Decoder**: Reconstructs FC from latent vector + condition
+- **Loss**: Standard ELBO, combining reconstruction loss and KL divergence
+
+The training objective:
+
+$$
+\mathcal{L} = \mathbb{E}_{q_\phi(z|x, c)}[\log p_\theta(x|z, c)] - D_{KL}(q_\phi(z|x, c) \| p(z))
+$$
+
+Where:
+- \( x \) is the observed FC
+- \( c \) is the stimulation condition
+- \( z \) is the latent variable
+
+## Controlling for Session Imbalance
+
+Due to our experimental design, each subject contributed more **sham** than **cTBS** sessions. To avoid bias, I implemented a **weighted random sampling strategy** during training, assigning higher sampling weights to the underrepresented condition. This ensured balanced representation and prevented the model from overfitting to sham patterns.
+
+## Results: Latent Representation of Stimulation Effects
+
+One way we quantified stimulation effects was by measuring the **Euclidean distance** in latent space between each session and the subject’s unstimulated (null) baseline.
+
+
+
+
+
+
+
