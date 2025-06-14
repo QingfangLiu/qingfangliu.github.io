@@ -12,7 +12,7 @@ In this post, I share how I used a conditional variational autoencoder (cVAE) to
 
 Understanding how neuromodulation affects the brain is a fundamental challenge in cognitive neuroscience. While traditional resting-state fMRI analyses often rely on group-level statistical comparisons or predefined regions of interest, these approaches may overlook subtle or distributed effects, especially at the individual level.
 
-In this project, I applied a **conditional variational autoencoder (cVAE)** to model and detect stimulation-induced changes in resting-state functional connectivity (FC). The cVAE was trained to capture the structure of whole-brain FC patterns across different TMS conditions, while accounting for individual variability.
+In this project, I applied a **conditional variational autoencoder (cVAE)** to model and detect stimulation-induced changes in resting-state functional connectivity (FC). The cVAE was trained to capture the structure of FC patterns across different TMS conditions, while accounting for individual variability.
 
 ## Why a cVAE?
 
@@ -24,14 +24,20 @@ This approach is particularly powerful for fMRI because:
 - There may be individual-level effects not aligned across participants.
 - Traditional statistical methods assume linearity or independence that often doesn’t hold.
 
-## Dataset and Preprocessing
+## Dataset
 
-Each participant underwent multiple resting-state scans across sessions with either **cTBS** or **sham** stimulation. From each session, I computed a functional connectivity matrix (Pearson correlations across ROIs), which served as the model input.
+Each participant underwent multiple resting-state scans across sessions with either **cTBS** or **sham** stimulation. We have one null session (works as baseline), 2 cTBS sessions, and 4 sham sessions. 
+
+
+## Preprocessing
+
+From each session, I computed a functional connectivity matrix (Pearson correlations across ROIs), which served as the model input.
 
 Key characteristics:
-- Input: Flattened upper triangle of FC matrices (after z-transformation)
-- Condition: One-hot vector encoding of stimulation type
+- Input: FC vector from each ROI to AAL region
+- Condition: One-hot vector encoding of subject identity
 - Target: Reconstruction of the original FC pattern
+
 
 ## Model Architecture
 
