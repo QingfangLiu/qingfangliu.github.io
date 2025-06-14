@@ -1,11 +1,15 @@
 ---
 layout: default
-title: My blog
+title: Blog
 ---
-	<h1>{{ page.title }}</h1>
-	<ul class="posts">
 
-	  {% for post in site.posts %}
-	  <li><span>{{ post.album }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li> 
-	  {% endfor %}
-	</ul>
+<h1>My Blog</h1>
+
+<ul>
+  <li>
+    <a href="/blog/cvae-neuromodulation.html">Using cVAE to Identify Effects of Neuromodulation</a><br>
+    <small>June 14, 2025</small><br>
+    <p>How I used deep generative models to analyze resting-state fMRI and uncover individual-specific effects of TMS.</p>
+  </li>
+  <!-- Add more posts here as needed -->
+</ul>
