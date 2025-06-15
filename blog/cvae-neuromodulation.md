@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using cVAE to Identify Effects of Neuromodulation on Individuals"
+title: "Detecting hidden neuromodulation effects through deep generative modeling"
 date: 2025-06-14
 tags: [neuroscience, deep learning, fMRI, TMS, cVAE]
 ---
