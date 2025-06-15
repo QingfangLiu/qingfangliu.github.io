@@ -110,6 +110,30 @@ ul.posts li {
   text-transform: uppercase;
 }
 
+/* Style for code blocks */
+pre code {
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  padding: 1em;
+  display: block;
+  overflow-x: auto;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+/* Style for inline code */
+code {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  font-size: 90%;
+}
+
+
+
 
 
 
