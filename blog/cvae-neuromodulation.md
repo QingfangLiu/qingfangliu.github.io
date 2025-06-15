@@ -31,7 +31,9 @@ To explore how brain stimulation affects the brain at rest, I collected data fro
 - **2 sessions with real brain stimulation** (called *cTBS*)
 - **4 sessions with sham stimulation** (like a placebo, with no real effect)
 
-This design allows us to compare brain activity **within each person**, helping us detect subtle changes that wouldn’t show up in group averages.
+This design allows us to compare brain activity **within each person**, detecting subtle changes that wouldn’t show up in group averages. Note that there's an inherent imbalance between sham and real sessions (for the other experiment purpose, not detailed here) and later we will talk about how to avoid bias of it during the VAE training.
+
+
 
 ## From scans to signals
 
