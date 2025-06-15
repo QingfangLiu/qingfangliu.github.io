@@ -5,7 +5,8 @@ date: 2025-06-14
 tags: [neuroscience, deep learning, fMRI, TMS, cVAE]
 ---
 
-In this post, I share how I used a conditional variational autoencoder (cVAE) to analyze resting-state fMRI data and uncover individual-specific effects of TMS. This is part of a bigger research project () but I separately share this post to highlight how DL advancements can help with experimental work in a way previously not thought of. 
+
+In this post, I share how I used a conditional variational autoencoder (cVAE) to analyze resting-state fMRI data and uncover individual-specific effects of TMS. While this analysis is part of a larger research project, I wrote this post separately to spotlight how advances in deep learning can empower experimental neuroscience in ways that were previously out of reach.
 
 
 ## Introduction
