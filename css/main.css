@@ -94,6 +94,24 @@ ul.posts li {
   margin-bottom: 2rem;
 }
 
+.project-labels {
+  margin: 0.3rem 0 0.8rem 0;
+}
+
+.label {
+  display: inline-block;
+  background-color: #e0f0ff;
+  color: #0077cc;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  margin-right: 0.4rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+}
+
+
+
 
 
 
