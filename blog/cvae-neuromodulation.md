@@ -9,7 +9,7 @@ tags: [neuroscience, deep learning, fMRI, TMS, cVAE]
 In this post, I share how I used a conditional variational autoencoder (cVAE) to analyze resting-state fMRI data and uncover individual-specific effects of TMS. While this analysis is part of a larger research project, I wrote this post separately to spotlight how advances in deep learning can empower experimental neuroscience in ways that were previously out of reach.
 
 
-## Introduction
+## Problem statement
 
 Understanding how neuromodulation affects the brain is a fundamental challenge in cognitive neuroscience. In this project, I applied a **conditional variational autoencoder (cVAE)** to model and detect stimulation-induced changes in resting-state functional connectivity (FC). The cVAE was trained to capture the structure of FC patterns across different TMS conditions, while accounting for individual variability.
 
@@ -19,23 +19,25 @@ Variational autoencoders (VAEs) are generative models that learn a latent repres
 
 This approach is particularly powerful for fMRI analysis because:
 
-- Functional connectivity (FC) patterns can be highly similar within individuals, potentially masking stimulation-related effects at the group level.
+- Functional connectivity (FC) patterns can be highly similar within individuals, potentially masking stimulation-related effects.
 - Stimulation may induce **individual-specific** effects that are not aligned across participants, making traditional group comparisons less sensitive.
 
 
-## Dataset
+## The data at a glance
 
-Each participant (in total 48) underwent multiple resting-state scans across sessions with either **cTBS** or **sham** stimulation. in total, We have one null session (works as baseline), 2 cTBS sessions, and 4 sham sessions. 
+To explore how brain stimulation affects the brain at rest, I collected data from **48 participants**. Each person came in for multiple sessions, including:
 
+- **1 baseline session** with no stimulation (just resting)
+- **2 sessions with real brain stimulation** (called *cTBS*)
+- **4 sessions with sham stimulation** (like a placebo, with no real effect)
 
-## Preprocessing
+This design allows us to compare brain activity **within each person**, helping us detect subtle changes that wouldn’t show up in group averages.
 
-From each session, I computed a functional connectivity matrix (Pearson correlations across ROIs), which served as the model input.
+## From scans to signals
 
-Key characteristics:
-- Input: FC vector from each ROI to AAL region
-- Condition: One-hot vector encoding of subject identity
-- Target: Reconstruction of the original FC pattern
+In each session, we recorded the brain's activity using resting-state fMRI. I then converted this activity into a **functional connectivity (FC) matrix**, which basically maps how different regions of the brain are communicating.
+
+These matrices were used as input to the deep learning model.
 
 
 ## Model Architecture
@@ -57,9 +59,15 @@ Where:
 - \( c \) is the stimulation condition
 - \( z \) is the latent variable
 
+Key characteristics:
+- Input: FC vector from each ROI to AAL region
+- Condition: One-hot vector encoding of subject identity
+- Target: Reconstruction of the original FC pattern
+
+
 ## Controlling for Session Imbalance
 
-Due to our experimental design, each subject contributed more **sham** than **cTBS** sessions. To avoid bias, I implemented a **weighted random sampling strategy** during training, assigning higher sampling weights to the underrepresented condition. This ensured balanced representation and prevented the model from overfitting to sham patterns.
+Due to our experimental design, each subject has data with more **sham** than **cTBS** sessions. To avoid bias, I implemented a **weighted random sampling strategy** during training, assigning higher sampling weights to the underrepresented condition. This ensured balanced representation and prevented the model from overfitting to sham patterns.
 
 ## Results: Latent Representation of Stimulation Effects
 
