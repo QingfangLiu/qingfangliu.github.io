@@ -15,12 +15,13 @@ Understanding how neuromodulation affects the brain is a fundamental challenge i
 
 ## Why a cVAE?
 
-Variational autoencoders (VAEs) are generative models that learn latent representation of data. By extending this to a **conditional** setup, the model can learn how latent structure shifts based on external factors—in this case, **stimulation condition** (cTBS vs sham).
+Variational autoencoders (VAEs) are generative models that learn a latent representation of data. By extending this to a **conditional** setup, the model can learn how the latent structure shifts based on external factors—in this case, the **stimulation condition** (cTBS vs. sham).
 
-This approach is particularly powerful for fMRI because:
+This approach is particularly powerful for fMRI analysis because:
 
-- The FC may be highly similar for each individual and therefore may obscure stimulation-related effects.
-- There may be individual-level effects not aligned across participants.
+- Functional connectivity (FC) patterns can be highly similar within individuals, potentially masking stimulation-related effects at the group level.
+- Stimulation may induce **individual-specific** effects that are not aligned across participants, making traditional group comparisons less sensitive.
+
 
 ## Dataset
 
