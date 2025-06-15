@@ -41,6 +41,12 @@ In each session, we recorded the brain's activity using resting-state fMRI. I th
 
 These matrices were used as input to the deep learning model.
 
+This is the code to load the data.
+
+```python
+# Encode FC matrix
+fc_vector = fc_matrix[np.triu_indices(fc_matrix.shape[0], k=1)]
+```
 
 ## Model Architecture
 
