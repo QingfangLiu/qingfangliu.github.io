@@ -132,32 +132,28 @@ code {
   font-size: 90%;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.skill-card {
+.skills-panel {
   background: #f9f9f9;
-  border: 1px solid #e3e7eb;
-  border-radius: 8px;
-  padding: 1rem 1.1rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  border-left: 4px solid #007acc;
+  margin-top: 1rem;
+  padding: 1.1rem 1.5rem;
 }
 
-.skill-card h3 {
-  margin: 0 0 0.45rem 0;
+.skill-row + .skill-row {
+  margin-top: 1.1rem;
+}
+
+.skill-row h3 {
+  margin: 0 0 0.3rem 0;
   font-size: 1rem;
   font-weight: 700;
-  color: #1f4f7c;
+  color: #222;
   line-height: 1.3;
 }
 
-.skill-card p {
+.skill-row p {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.02rem;
   line-height: 1.45;
   color: #333;
 }
@@ -167,12 +163,7 @@ code {
     width: min(92%, 720px);
     margin: 32px auto;
   }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
 }
-
 
 
 
